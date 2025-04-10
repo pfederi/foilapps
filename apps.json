@@ -31,7 +31,7 @@
     {
       "name": "Foile.ch",
       "url": "https://foile.ch/",
-      "sport": ["pumpfoil"],
+      "sport": ["pumpfoil", "downwindfoil", "wingfoiling"],
       "platforms": ["web"],
       "description": "A web platform for analyzing foiling sessions with detailed statistics. Upload sessions from multiple GPS devices, track maneuvers, and compare performance with the community."
     },
