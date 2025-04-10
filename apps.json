@@ -1,25 +1,67 @@
 {
   "apps": [
     {
-      "name": "NextWave",
+      "name": "Next Wave",
       "url": "https://nextwaveapp.ch/",
-      "sport": "pumpfoil",
-      "description": "NextWave is a pumpfoil tracking app that helps you monitor your sessions and progress.",
+      "sport": ["pumpfoil"],
+      "description": "NextWave helps wake foilers across Swiss lakes by providing real-time boat schedules, ensuring you never miss the perfect wake for your foiling session.",
       "platforms": ["ios", "android"]
     },
     {
       "name": "Foil Mates",
       "url": "https://foilmates.com/",
-      "sport": "pumpfoil",
-      "description": "find the best foiling spots while you're on the go, connect with new people, and see where other foilers are currently riding.",
+      "sport": ["pumpfoil"],
+      "description": "Find the best foiling spots while you're on the go, connect with new people, and see where other foilers are currently riding.",
       "platforms": ["ios", "android"]
     },
     {
       "name": "Foil Motion",
       "url": "https://foilmotion.webchoice.ch/",
-      "sport": "pumpfoil",
+      "sport": ["pumpfoil"],
       "description": "Track your foil sessions with this iOS app.",
-      "platforms": ["ios"]
+      "platforms": ["ios", "apple watch"]
+    },
+    {
+      "name": "Pumpfoiling Spots",
+      "url": "https://pumpfoiling.community/pump-foiling-spots/",
+      "sport": ["pumpfoil"],
+      "description": "Discover and explore the best pumpfoiling spots around the world. Find detailed information about launch sites, conditions, and local tips from the community.",
+      "platforms": ["web"]
+    },
+    {
+      "name": "Foile.ch",
+      "url": "https://foile.ch/",
+      "sport": ["pumpfoil"],
+      "description": "A web platform for analyzing foiling sessions with detailed statistics. Upload sessions from multiple GPS devices, track maneuvers, and compare performance with the community.",
+      "platforms": ["web"]
+    },
+    {
+      "name": "JMG-APP Foiling",
+      "url": "https://www.jeanmichelgruber.com/applications-garmin-garmin-apps/foiling/english/",
+      "sport": ["surffoil", "pumpfoil", "downwindfoil", "efoil"],
+      "description": "The first Garmin app for foil activities including surf foil, pump foil, downwind foil and e-foil. Track speed, distance, heart rate, and automatically record laps for detailed session analysis.",
+      "platforms": ["garmin"]
+    },
+    {
+      "name": "Hoolan",
+      "sport": ["Wingfoiling", "Kitefoiling"],
+      "platforms": ["iOS", "Android", "Apple Watch", "Garmin"],
+      "description": "Track and analyse your kitesurfing, wingfoiling and windsurfing sessions for FREE. Record both jump and GPS track data on your Apple Watch or Garmin and see live data on your wrist as you ride.",
+      "url": "https://www.hoolan.app/"
+    },
+    {
+      "name": "Waterspeed",
+      "sport": ["Wingfoiling", "Hydrofoil", "Kitefoil", "eFoil", "Foil", "Pump surf"],
+      "platforms": ["iOS", "Android", "Apple Watch", "Garmin"],
+      "description": "Track and analyze your water sports sessions with real-time data on your watch. Features include speed tracking, GPS mapping, weather forecasts, and detailed performance analytics. Perfect for all water sports enthusiasts.",
+      "url": "https://waterspeedapp.com/"
+    },
+    {
+      "name": "Surfr",
+      "sport": ["Wingfoiling", "Kitefoiling"],
+      "platforms": ["iOS", "Android", "Apple Watch", "Android Watch", "Garmin"],
+      "description": "The ultimate app for kiteboarders, windsurfers, and wingfoilers. Track your sessions with high accuracy, connect with a community of 80,000+ riders, discover new spots, and boost your progression with in-depth analysis.",
+      "url": "https://www.thesurfr.app/"
     }
   ]
 } 
