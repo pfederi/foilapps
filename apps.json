@@ -1,0 +1,10 @@
+{
+  "apps": [
+    {
+      "name": "NextWave",
+      "url": "https://nextwaveapp.ch/",
+      "sport": "pumpfoil",
+      "description": "NextWave is a pumpfoil tracking app that helps you monitor your sessions and progress."
+    }
+  ]
+} 
