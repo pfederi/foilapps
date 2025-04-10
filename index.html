@@ -450,6 +450,57 @@
             platform: 'all'
         };
 
+        // Sport name mapping for normalization
+        const sportMapping = {
+            'wing': ['wingfoil', 'wingfoiling', 'wing'],
+            'kite': ['kitefoil', 'kitefoiling', 'kite'],
+            'pump': ['pumpfoil', 'pump', 'pump surf'],
+            'efoil': ['efoil', 'electric foil'],
+            'surf': ['surffoil', 'surf'],
+            'downwind': ['downwindfoil', 'downwind']
+        };
+
+        // Get normalized sport name
+        function getNormalizedSport(sport) {
+            sport = sport.toLowerCase().trim();
+            // Skip generic 'foil' category
+            if (sport === 'foil') return null;
+            
+            for (const [normalized, variations] of Object.entries(sportMapping)) {
+                if (variations.includes(sport)) {
+                    return normalized;
+                }
+            }
+            return sport; // Return original if no mapping found
+        }
+
+        // Get unique sports from apps data
+        function getUniqueSports(apps) {
+            const sports = new Set();
+            apps.forEach(app => {
+                app.sport.forEach(sport => {
+                    const normalizedSport = getNormalizedSport(sport);
+                    if (normalizedSport) { // Only add if not null (skip 'foil')
+                        sports.add(normalizedSport);
+                    }
+                });
+            });
+            return Array.from(sports).sort();
+        }
+
+        // Update sport filter buttons
+        function updateSportFilters(sports) {
+            const sportFiltersContainer = document.querySelector('.filter-section:first-child div');
+            sportFiltersContainer.innerHTML = `
+                <button class="filter-button active" data-filter="sport-all">All</button>
+                ${sports.map(sport => `
+                    <button class="filter-button" data-filter="sport-${sport}">
+                        ${sport.charAt(0).toUpperCase() + sport.slice(1)}
+                    </button>
+                `).join('')}
+            `;
+        }
+
         async function loadApps() {
             try {
                 console.log('Fetching apps.json...');
@@ -465,7 +516,10 @@
                 
                 if (data && data.apps && Array.isArray(data.apps)) {
                     appsData = data.apps;
+                    const uniqueSports = getUniqueSports(appsData);
+                    updateSportFilters(uniqueSports);
                     renderApps();
+                    addFilterEventListeners();
                 } else {
                     console.error('Invalid data format in apps.json:', data);
                     document.querySelector('.apps-grid').innerHTML = '<p>Error: Invalid data format in apps.json</p>';
@@ -483,7 +537,10 @@
             // Apply sport filter
             if (currentFilters.sport !== 'all') {
                 filteredApps = filteredApps.filter(app => 
-                    app.sport.includes(currentFilters.sport)
+                    app.sport.some(sport => {
+                        const normalizedSport = getNormalizedSport(sport);
+                        return normalizedSport && normalizedSport === currentFilters.sport;
+                    })
                 );
             }
 
@@ -504,13 +561,16 @@
                 <div class="app-card">
                     <h2>${app.name}</h2>
                     <div class="chips-container">
-                        ${app.sport.map(sport => `
-                            <span class="chip sport">${sport}</span>
-                        `).join('')}
+                        ${app.sport.map(sport => {
+                            const normalizedSport = getNormalizedSport(sport);
+                            return normalizedSport ? `
+                                <span class="chip sport">${normalizedSport}</span>
+                            ` : '';
+                        }).join('')}
                     </div>
                     <div class="chips-container">
                         ${app.platforms.map(platform => `
-                            <span class="chip platform">${platform}</span>
+                            <span class="chip platform">${platform.toLowerCase()}</span>
                         `).join('')}
                     </div>
                     <p class="description">${app.description}</p>
@@ -519,10 +579,7 @@
             `).join('');
         }
 
-        // Add click handlers for filter buttons
-        document.addEventListener('DOMContentLoaded', () => {
-            loadApps();
-
+        function addFilterEventListeners() {
             const filterButtons = document.querySelectorAll('.filter-button');
             filterButtons.forEach(button => {
                 button.addEventListener('click', () => {
@@ -542,6 +599,11 @@
                     renderApps();
                 });
             });
+        }
+
+        // Initialize app
+        document.addEventListener('DOMContentLoaded', () => {
+            loadApps();
         });
 
         // Sticky filter functionality
