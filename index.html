@@ -202,25 +202,32 @@
                 const data = await response.json();
                 const container = document.getElementById('apps-container');
                 
-                container.innerHTML = data.apps.map(app => `
-                    <div class="app-card">
-                        <h2>${app.name}</h2>
-                        <span class="sport">${app.sport}</span>
-                        <div class="platforms">
-                            ${app.platforms.map(platform => `
-                                <span class="platform">${platform}</span>
-                            `).join('')}
+                if (data && data.apps && Array.isArray(data.apps)) {
+                    container.innerHTML = data.apps.map(app => `
+                        <div class="app-card">
+                            <h2>${app.name}</h2>
+                            <span class="sport">${app.sport}</span>
+                            <div class="platforms">
+                                ${app.platforms.map(platform => `
+                                    <span class="platform">${platform}</span>
+                                `).join('')}
+                            </div>
+                            <p class="description">${app.description}</p>
+                            <a href="${app.url}" target="_blank">Visit App</a>
                         </div>
-                        <p class="description">${app.description}</p>
-                        <a href="${app.url}" target="_blank">Visit App</a>
-                    </div>
-                `).join('');
+                    `).join('');
+                } else {
+                    console.error('Invalid data format in apps.json');
+                    container.innerHTML = '<p>Error loading apps. Please try again later.</p>';
+                }
             } catch (error) {
                 console.error('Error loading apps:', error);
+                document.getElementById('apps-container').innerHTML = '<p>Error loading apps. Please try again later.</p>';
             }
         }
 
-        loadApps();
+        // Call the function when the page loads
+        document.addEventListener('DOMContentLoaded', loadApps);
     </script>
 </body>
 </html> 
