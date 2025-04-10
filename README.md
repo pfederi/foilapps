@@ -18,9 +18,18 @@ To add your app to this directory, please follow these steps:
   "name": "Your App Name",
   "url": "https://your-app-url.com",
   "sport": "pumpfoil/wingfoil/etc",
-  "description": "Brief description of your app"
+  "description": "Brief description of your app",
+  "platforms": ["ios", "android", "garmin", "web"]
 }
 ```
+
+Available platform options:
+- `ios`: iOS app
+- `android`: Android app
+- `garmin`: Garmin watch app
+- `web`: Web application
+- `other`: Other platforms
+
 4. Submit a pull request
 
 ## Current Apps
@@ -34,6 +43,7 @@ We welcome contributions! If you have a foil-related app that you'd like to add 
 - Provide a valid URL for your app
 - Include a clear description
 - Specify the correct sport type
+- List all supported platforms
 - Ensure all information is accurate and up-to-date
 
 ## License
@@ -58,9 +68,18 @@ Um Ihre App zu diesem Verzeichnis hinzuzufügen, folgen Sie bitte diesen Schritt
   "name": "Ihr App-Name",
   "url": "https://ihre-app-url.com",
   "sport": "pumpfoil/wingfoil/etc",
-  "description": "Kurze Beschreibung Ihrer App"
+  "description": "Kurze Beschreibung Ihrer App",
+  "platforms": ["ios", "android", "garmin", "web"]
 }
 ```
+
+Verfügbare Plattformoptionen:
+- `ios`: iOS-App
+- `android`: Android-App
+- `garmin`: Garmin-Smartwatch-App
+- `web`: Web-Anwendung
+- `other`: Andere Plattformen
+
 4. Erstellen Sie einen Pull Request
 
 ## Aktuelle Apps

@@ -4,7 +4,22 @@
       "name": "NextWave",
       "url": "https://nextwaveapp.ch/",
       "sport": "pumpfoil",
-      "description": "NextWave is a pumpfoil tracking app that helps you monitor your sessions and progress."
+      "description": "NextWave is a pumpfoil tracking app that helps you monitor your sessions and progress.",
+      "platforms": ["ios", "android"]
+    },
+    {
+      "name": "Foil Mates",
+      "url": "https://foilmates.com/",
+      "sport": "pumpfoil",
+      "description": "find the best foiling spots while you're on the go, connect with new people, and see where other foilers are currently riding.",
+      "platforms": ["ios", "android"]
+    },
+    {
+      "name": "Foil Motion",
+      "url": "https://foilmotion.webchoice.ch/",
+      "sport": "pumpfoil",
+      "description": "Track your foil sessions with this iOS app.",
+      "platforms": ["ios"]
     }
   ]
 } 
