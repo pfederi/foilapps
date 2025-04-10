@@ -420,7 +420,9 @@
                         <button class="filter-button" data-filter="platform-iOS">iOS</button>
                         <button class="filter-button" data-filter="platform-Android">Android</button>
                         <button class="filter-button" data-filter="platform-Apple Watch">Apple Watch</button>
+                        <button class="filter-button" data-filter="platform-Android Watch">Android Watch</button>
                         <button class="filter-button" data-filter="platform-Garmin">Garmin</button>
+                        <button class="filter-button" data-filter="platform-web">Web</button>
                     </div>
                 </div>
             </div>
@@ -463,8 +465,8 @@
         // Get normalized sport name
         function getNormalizedSport(sport) {
             sport = sport.toLowerCase().trim();
-            // Skip generic 'foil' category
-            if (sport === 'foil') return null;
+            // Skip generic categories
+            if (['foil', 'hydrofoil'].includes(sport)) return null;
             
             for (const [normalized, variations] of Object.entries(sportMapping)) {
                 if (variations.includes(sport)) {
