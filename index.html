@@ -89,6 +89,20 @@
             align-items: flex-start;
         }
 
+        .sticky-wrapper {
+            position: sticky;
+            top: 0;
+            background: var(--background-color);
+            padding: 1rem 0;
+            z-index: 100;
+            margin: -1rem 0;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .sticky-wrapper.is-sticky {
+            box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.1);
+        }
+
         .filter-section {
             margin-bottom: 0;
             flex: 1;
@@ -382,15 +396,12 @@
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <div class="header-content">
-                <h1>Foil Apps Directory</h1>
-                <p class="subtitle">Discover the best apps for foiling enthusiasts</p>
-            </div>
-            <a href="#add-app" class="header-button">Add your app</a>
-        </div>
+        <header class="header">
+            <h1>Foil Apps Directory</h1>
+            <a href="https://github.com/pfederi/foilapps" target="_blank" class="header-button">Add App</a>
+        </header>
 
-        <div class="sticky-wrapper" id="sticky-filters">
+        <div class="sticky-wrapper">
             <div class="filter-container">
                 <div class="filter-section">
                     <span class="filter-label">Filter by Sport</span>
@@ -413,10 +424,10 @@
                     </div>
                 </div>
             </div>
-            <div class="results-counter" id="results-counter"></div>
+            <div class="results-counter"></div>
         </div>
 
-        <div class="apps-grid" id="apps-container">
+        <div class="apps-grid">
             <!-- Apps will be loaded here -->
         </div>
 
@@ -457,16 +468,16 @@
                     renderApps();
                 } else {
                     console.error('Invalid data format in apps.json:', data);
-                    document.getElementById('apps-container').innerHTML = '<p>Error: Invalid data format in apps.json</p>';
+                    document.querySelector('.apps-grid').innerHTML = '<p>Error: Invalid data format in apps.json</p>';
                 }
             } catch (error) {
                 console.error('Error loading apps:', error);
-                document.getElementById('apps-container').innerHTML = `<p>Error loading apps: ${error.message}</p>`;
+                document.querySelector('.apps-grid').innerHTML = `<p>Error loading apps: ${error.message}</p>`;
             }
         }
 
         function renderApps() {
-            const container = document.getElementById('apps-container');
+            const container = document.querySelector('.apps-grid');
             let filteredApps = appsData;
 
             // Apply sport filter
@@ -487,7 +498,7 @@
             const counterText = filteredApps.length === appsData.length 
                 ? `Showing all <strong>${filteredApps.length}</strong> apps`
                 : `Showing <strong>${filteredApps.length}</strong> of <strong>${appsData.length}</strong> apps`;
-            document.getElementById('results-counter').innerHTML = counterText;
+            document.querySelector('.results-counter').innerHTML = counterText;
 
             container.innerHTML = filteredApps.map(app => `
                 <div class="app-card">
@@ -533,14 +544,15 @@
             });
         });
 
-        // Add scroll handler for sticky filter shadow
+        // Sticky filter functionality
+        const stickyWrapper = document.querySelector('.sticky-wrapper');
+        const appsGrid = document.querySelector('.apps-grid');
+        
         window.addEventListener('scroll', () => {
-            const stickyWrapper = document.getElementById('sticky-filters');
-            const appsGrid = document.querySelector('.apps-grid');
-            const appsGridTop = appsGrid.getBoundingClientRect().top;
-            const stickyHeight = stickyWrapper.offsetHeight;
-
-            if (appsGridTop <= stickyHeight) {
+            const rect = appsGrid.getBoundingClientRect();
+            const filterRect = stickyWrapper.getBoundingClientRect();
+            
+            if (rect.top <= filterRect.bottom) {
                 stickyWrapper.classList.add('is-sticky');
             } else {
                 stickyWrapper.classList.remove('is-sticky');
