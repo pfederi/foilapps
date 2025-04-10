@@ -36,25 +36,6 @@
             margin-bottom: 1rem;
         }
 
-        .language-switch {
-            margin-bottom: 2rem;
-        }
-
-        .language-switch button {
-            background: none;
-            border: 1px solid var(--primary-color);
-            color: var(--primary-color);
-            padding: 0.5rem 1rem;
-            cursor: pointer;
-            margin: 0 0.5rem;
-            border-radius: 4px;
-        }
-
-        .language-switch button.active {
-            background-color: var(--primary-color);
-            color: white;
-        }
-
         .apps-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -134,10 +115,6 @@
     <div class="container">
         <header>
             <h1>Foil Apps Directory</h1>
-            <div class="language-switch">
-                <button class="active" onclick="switchLanguage('en')">English</button>
-                <button onclick="switchLanguage('de')">Deutsch</button>
-            </div>
         </header>
 
         <div class="apps-grid" id="apps-container">
@@ -145,41 +122,13 @@
         </div>
 
         <div class="add-app">
-            <h2 id="add-app-title">Want to add your app?</h2>
-            <p id="add-app-description">Follow the instructions in our README to add your app to this directory.</p>
+            <h2>Want to add your app?</h2>
+            <p>Follow the instructions in our README to add your app to this directory.</p>
             <a href="https://github.com/yourusername/foil-apps-directory" target="_blank">View on GitHub</a>
         </div>
     </div>
 
     <script>
-        const translations = {
-            en: {
-                title: "Foil Apps Directory",
-                addAppTitle: "Want to add your app?",
-                addAppDescription: "Follow the instructions in our README to add your app to this directory.",
-                viewOnGithub: "View on GitHub"
-            },
-            de: {
-                title: "Foil Apps Verzeichnis",
-                addAppTitle: "Möchten Sie Ihre App hinzufügen?",
-                addAppDescription: "Folgen Sie den Anweisungen in unserer README, um Ihre App zu diesem Verzeichnis hinzuzufügen.",
-                viewOnGithub: "Auf GitHub anzeigen"
-            }
-        };
-
-        let currentLanguage = 'en';
-
-        function switchLanguage(lang) {
-            currentLanguage = lang;
-            document.querySelectorAll('.language-switch button').forEach(btn => {
-                btn.classList.toggle('active', btn.textContent.toLowerCase().includes(lang));
-            });
-            
-            document.getElementById('add-app-title').textContent = translations[lang].addAppTitle;
-            document.getElementById('add-app-description').textContent = translations[lang].addAppDescription;
-            document.querySelector('.add-app a').textContent = translations[lang].viewOnGithub;
-        }
-
         async function loadApps() {
             try {
                 const response = await fetch('apps.json');
