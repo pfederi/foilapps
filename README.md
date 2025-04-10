@@ -1,14 +1,19 @@
 # Foil Apps Directory
 
-A curated directory of apps for foil sports (pumpfoil, wingfoil, etc.).
+A curated directory of apps for foiling enthusiasts. Find and discover apps for all foiling disciplines - from wing foiling to pump foiling and everything in between.
 
-## View the Directory
+🌐 **Live Directory**: [https://pfederi.github.io/foilapps/](https://pfederi.github.io/foilapps/)
 
-The directory is available at: [https://pfederi.github.io/foilapps/](https://pfederi.github.io/foilapps/)
+## Features
 
-## How to Add Your App
+- 📱 Filter apps by platform (iOS, Android, Apple Watch, Garmin)
+- 🏄‍♂️ Filter by sport (Wing, Kite, Pump, eFoil)
+- ✨ Clean, modern interface
+- 🔄 Regular updates through community contributions
 
-To add your app to this directory, please follow these steps:
+## Adding Your App
+
+To add your app to the directory:
 
 1. Fork this repository
 2. Edit the `apps.json` file
@@ -17,71 +22,120 @@ To add your app to this directory, please follow these steps:
 {
   "name": "Your App Name",
   "url": "https://your-app-url.com",
-  "sport": "pumpfoil/wingfoil/etc",
-  "description": "Brief description of your app",
-  "platforms": ["ios", "android", "garmin", "web"]
+  "sport": ["wingfoil", "kitefoil"],
+  "platforms": ["ios", "android", "apple watch", "garmin"],
+  "description": "Brief description of your app"
 }
 ```
 
-Available platform options:
+### Available Platforms
 - `ios`: iOS app
 - `android`: Android app
+- `apple watch`: Apple Watch app
 - `garmin`: Garmin watch app
+- `android watch`: Android Wear OS app
 - `web`: Web application
-- `other`: Other platforms
+
+### Available Sports
+- `wingfoil`: Wing Foiling
+- `kitefoil`: Kite Foiling
+- `pumpfoil`: Pump Foiling
+- `efoil`: Electric Foiling
+- `surffoil`: Surf Foiling
+- `downwindfoil`: Downwind Foiling
 
 4. Submit a pull request
 
-## Current Apps
-
-The directory is automatically updated when new apps are added through pull requests.
-
 ## Contributing
 
-We welcome contributions! If you have a foil-related app that you'd like to add to this directory, please follow the steps above to submit your app. Make sure to:
+We welcome contributions! Please ensure:
+- Your app is actively maintained
+- The URL is valid and accessible
+- The description is clear and accurate
+- All supported platforms are correctly listed
+- Sport categories are relevant to foiling
 
-- Provide a valid URL for your app
-- Include a clear description
-- Specify the correct sport type
-- List all supported platforms
-- Ensure all information is accurate and up-to-date
+## Development
+
+This is an open-source project built with:
+- HTML/CSS for the frontend
+- GitHub Pages for hosting
+- GitHub Actions for automated deployments
 
 ## License
 
 This project is open source and available under the MIT License.
 
+Made with ❤️ by [Lakeshore Studios](https://lakeshorestudios.ch)
+
 ---
 
 # Foil Apps Verzeichnis
 
-Ein kuratiertes Verzeichnis von Apps für Foilsport (Pumpfoil, Wingfoil, etc.).
+Ein kuratiertes Verzeichnis von Apps für Foiling-Enthusiasten. Finde und entdecke Apps für alle Foiling-Disziplinen - vom Wing Foiling bis zum Pump Foiling.
 
-## Wie man eine App hinzufügt
+🌐 **Live Verzeichnis**: [https://pfederi.github.io/foilapps/](https://pfederi.github.io/foilapps/)
 
-Um Ihre App zu diesem Verzeichnis hinzuzufügen, folgen Sie bitte diesen Schritten:
+## Features
 
-1. Forken Sie dieses Repository
-2. Bearbeiten Sie die Datei `apps.json`
-3. Fügen Sie Ihre App-Informationen im folgenden Format hinzu:
+- 📱 Filtere Apps nach Plattform (iOS, Android, Apple Watch, Garmin)
+- 🏄‍♂️ Filtere nach Sportart (Wing, Kite, Pump, eFoil)
+- ✨ Klare, moderne Benutzeroberfläche
+- 🔄 Regelmäßige Updates durch Community-Beiträge
+
+## App hinzufügen
+
+So fügst du deine App zum Verzeichnis hinzu:
+
+1. Forke dieses Repository
+2. Bearbeite die `apps.json` Datei
+3. Füge deine App-Informationen in folgendem Format hinzu:
 ```json
 {
-  "name": "Ihr App-Name",
-  "url": "https://ihre-app-url.com",
-  "sport": "pumpfoil/wingfoil/etc",
-  "description": "Kurze Beschreibung Ihrer App",
-  "platforms": ["ios", "android", "garmin", "web"]
+  "name": "Dein App-Name",
+  "url": "https://deine-app-url.com",
+  "sport": ["wingfoil", "kitefoil"],
+  "platforms": ["ios", "android", "apple watch", "garmin"],
+  "description": "Kurze Beschreibung deiner App"
 }
 ```
 
-Verfügbare Plattformoptionen:
-- `ios`: iOS-App
-- `android`: Android-App
-- `garmin`: Garmin-Smartwatch-App
+### Verfügbare Plattformen
+- `ios`: iOS App
+- `android`: Android App
+- `apple watch`: Apple Watch App
+- `garmin`: Garmin Watch App
+- `android watch`: Android Wear OS App
 - `web`: Web-Anwendung
-- `other`: Andere Plattformen
 
-4. Erstellen Sie einen Pull Request
+### Verfügbare Sportarten
+- `wingfoil`: Wing Foiling
+- `kitefoil`: Kite Foiling
+- `pumpfoil`: Pump Foiling
+- `efoil`: Electric Foiling
+- `surffoil`: Surf Foiling
+- `downwindfoil`: Downwind Foiling
 
-## Aktuelle Apps
+4. Erstelle einen Pull Request
 
-Das Verzeichnis wird automatisch aktualisiert, wenn neue Apps über Pull Requests hinzugefügt werden. 
+## Mitmachen
+
+Wir freuen uns über Beiträge! Bitte stelle sicher, dass:
+- Deine App aktiv gepflegt wird
+- Die URL gültig und erreichbar ist
+- Die Beschreibung klar und präzise ist
+- Alle unterstützten Plattformen korrekt aufgelistet sind
+- Die Sportkategorien relevant für Foiling sind
+
+## Entwicklung
+
+Dies ist ein Open-Source-Projekt, entwickelt mit:
+- HTML/CSS für das Frontend
+- GitHub Pages für das Hosting
+- GitHub Actions für automatisierte Deployments
+
+## Lizenz
+
+Dieses Projekt ist Open Source und unter der MIT-Lizenz verfügbar.
+
+Made with ❤️ by [Lakeshore Studios](https://lakeshorestudios.ch) 
