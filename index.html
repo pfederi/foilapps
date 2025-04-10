@@ -6,9 +6,12 @@
     <title>Foil Apps Directory</title>
     <style>
         :root {
-            --primary-color: #0066cc;
-            --background-color: #f5f5f5;
+            --primary-color: #1e88e5; /* Ocean blue */
+            --secondary-color: #00acc1; /* Turquoise */
+            --background-color: #e3f2fd; /* Light blue background */
             --card-background: #ffffff;
+            --accent-color: #4fc3f7; /* Light blue accent */
+            --text-color: #2c3e50; /* Dark blue-gray text */
         }
 
         body {
@@ -16,7 +19,7 @@
             margin: 0;
             padding: 0;
             background-color: var(--background-color);
-            color: #333;
+            color: var(--text-color);
         }
 
         .container {
@@ -28,12 +31,17 @@
         header {
             text-align: center;
             margin-bottom: 3rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            padding: 2rem;
+            border-radius: 8px;
+            color: white;
         }
 
         h1 {
-            color: var(--primary-color);
+            color: white;
             font-size: 2.5rem;
             margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
 
         .apps-grid {
@@ -46,12 +54,14 @@
             background: var(--card-background);
             border-radius: 8px;
             padding: 1.5rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: transform 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid rgba(30,136,229,0.1);
         }
 
         .app-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
         }
 
         .app-card h2 {
@@ -61,7 +71,8 @@
 
         .app-card .sport {
             display: inline-block;
-            background-color: #e0e0e0;
+            background-color: var(--accent-color);
+            color: white;
             padding: 0.25rem 0.75rem;
             border-radius: 15px;
             font-size: 0.9rem;
@@ -71,6 +82,7 @@
         .app-card .description {
             margin-bottom: 1rem;
             line-height: 1.5;
+            color: var(--text-color);
         }
 
         .app-card a {
@@ -84,7 +96,7 @@
         }
 
         .app-card a:hover {
-            background-color: #0052a3;
+            background-color: var(--secondary-color);
         }
 
         .add-app {
@@ -93,7 +105,12 @@
             padding: 2rem;
             background: var(--card-background);
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border: 1px solid rgba(30,136,229,0.1);
+        }
+
+        .add-app h2 {
+            color: var(--primary-color);
         }
 
         .add-app a {
@@ -104,10 +121,11 @@
             padding: 0.75rem 1.5rem;
             border-radius: 4px;
             margin-top: 1rem;
+            transition: background-color 0.2s;
         }
 
         .add-app a:hover {
-            background-color: #0052a3;
+            background-color: var(--secondary-color);
         }
     </style>
 </head>
@@ -124,7 +142,7 @@
         <div class="add-app">
             <h2>Want to add your app?</h2>
             <p>Follow the instructions in our README to add your app to this directory.</p>
-            <a href="https://github.com/yourusername/foil-apps-directory" target="_blank">View on GitHub</a>
+            <a href="https://github.com/pfederi/foilapps" target="_blank">View on GitHub</a>
         </div>
     </div>
 

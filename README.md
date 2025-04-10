@@ -4,7 +4,7 @@ A curated directory of apps for foil sports (pumpfoil, wingfoil, etc.).
 
 ## View the Directory
 
-The directory is available at: [https://yourusername.github.io/foil-apps-directory](https://yourusername.github.io/foil-apps-directory)
+The directory is available at: [https://pfederi.github.io/foilapps/](https://pfederi.github.io/foilapps/)
 
 ## How to Add Your App
 
