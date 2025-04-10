@@ -7,16 +7,15 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <style>
         :root {
-            --primary-color: #000000;
             --background-color: #ffffff;
             --card-background: #ffffff;
-            --text-color: #000000;
-            --border-color: #e0e0e0;
-            --hover-color: #f5f5f5;
-            --sport-chip-bg: #e3f2fd;
-            --sport-chip-text: #1976d2;
-            --platform-chip-bg: #f3e5f5;
-            --platform-chip-text: #7b1fa2;
+            --text-color: #0f172a;
+            --border-color: #e2e8f0;
+            --hover-color: #f8fafc;
+            --sport-chip-bg: #e5f4ff;
+            --sport-chip-text: #0369a1;
+            --platform-chip-bg: #ecfeff;
+            --platform-chip-text: #0d9488;
         }
 
         * {
@@ -26,77 +25,188 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            margin: 0;
-            padding: 0;
+            font-family: 'Inter', sans-serif;
             background-color: var(--background-color);
             color: var(--text-color);
             line-height: 1.5;
-            -webkit-font-smoothing: antialiased;
+            padding: 4rem 2rem;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem;
         }
 
-        header {
-            text-align: left;
-            margin-bottom: 4rem;
-            padding: 2rem 0;
-            border-bottom: 2px solid var(--border-color);
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+
+        .header-content {
+            max-width: 600px;
+        }
+
+        .header-button {
+            display: inline-flex;
+            align-items: center;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #fff;
+            background: #000;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 100px;
+            transition: all 0.2s ease;
+            margin-left: 2rem;
+        }
+
+        .header-button:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 4rem;
             font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: #64748b;
+            margin-bottom: 1.5rem;
+            max-width: 600px;
+        }
+
+        .filter-container {
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+
+        .filter-section {
+            margin-bottom: 0;
+        }
+
+        .sticky-wrapper {
+            position: sticky;
+            top: 0;
+            background: var(--background-color);
+            padding: 1rem 0;
+            z-index: 100;
+            margin: -1rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .sticky-wrapper.is-sticky {
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        }
+
+        .filter-label {
+            font-size: 0.75rem;
+            color: #64748b;
+            margin-bottom: 0.375rem;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .filter-button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            margin: 0 0.25rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #64748b;
+            background: transparent;
+            border: 1px solid #e2e8f0;
+            border-radius: 100px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .filter-button:first-child {
+            margin-left: 0;
+        }
+
+        .filter-button:hover {
+            border-color: #0369a1;
+            color: #0369a1;
+        }
+
+        .filter-button.active {
+            background: #0369a1;
+            color: white;
+            border-color: #0369a1;
+        }
+
+        .results-counter {
+            font-size: 0.875rem;
+            color: #64748b;
+            margin-bottom: 1.5rem;
+        }
+
+        .results-counter strong {
+            color: #0f172a;
+            font-weight: 500;
         }
 
         .apps-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 4rem;
         }
 
         .app-card {
             background: var(--card-background);
-            padding: 1.5rem;
+            padding: 2.5rem;
+            border-radius: 1.5rem;
             border: 1px solid var(--border-color);
-            transition: all 0.2s ease;
+            transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
             height: 100%;
+            position: relative;
+            overflow: hidden;
         }
 
         .app-card:hover {
-            background-color: var(--hover-color);
+            border-color: #000;
         }
 
         .app-card h2 {
-            font-size: 1.25rem;
+            font-size: 1.75rem;
             font-weight: 600;
-            margin-bottom: 0.75rem;
-            letter-spacing: -0.01em;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
         }
 
         .app-card .chips-container {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .app-card .chips-container:last-of-type {
+            margin-bottom: 1.5rem;
         }
 
         .app-card .chip {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
             font-size: 0.75rem;
             font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
+            letter-spacing: 0.02em;
+            padding: 0.375rem 0.75rem;
+            border-radius: 100px;
+            line-height: 1;
         }
 
         .app-card .chip.sport {
@@ -110,107 +220,185 @@
         }
 
         .app-card .description {
-            font-size: 0.875rem;
-            margin-bottom: 1.5rem;
-            color: #000;
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            color: #334155;
             flex-grow: 1;
+            line-height: 1.7;
         }
 
         .app-card a {
-            display: inline-block;
-            font-size: 0.875rem;
+            display: inline-flex;
+            align-items: center;
+            font-size: 1rem;
             font-weight: 500;
-            color: var(--text-color);
+            color: #000;
             text-decoration: none;
-            padding: 0.5rem 0;
-            border-bottom: 1px solid var(--text-color);
-            transition: opacity 0.2s ease;
+            padding: 0.75rem 0;
+            transition: all 0.2s ease;
             margin-top: auto;
-            width: fit-content;
+            border-bottom: none;
         }
 
-        .app-card a:hover {
-            opacity: 0.7;
+        .app-card a:after {
+            content: "→";
+            margin-left: 0.5rem;
+            transition: transform 0.2s ease;
+        }
+
+        .app-card a:hover:after {
+            transform: translateX(4px);
         }
 
         .add-app {
-            text-align: left;
             margin-top: 4rem;
-            padding: 2rem;
-            border: 1px solid var(--border-color);
+            padding: 3rem;
+            background: var(--hover-color);
+            border-radius: 1.5rem;
+            text-align: center;
         }
 
         .add-app h2 {
-            font-size: 1.25rem;
+            font-size: 2rem;
             font-weight: 600;
-            margin-bottom: 0.75rem;
-            letter-spacing: -0.01em;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
         }
 
         .add-app p {
-            font-size: 0.875rem;
-            color: #666;
-            margin-bottom: 1rem;
+            font-size: 1.125rem;
+            color: #64748b;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .add-app a {
-            display: inline-block;
-            font-size: 0.875rem;
+            display: inline-flex;
+            align-items: center;
+            font-size: 1rem;
             font-weight: 500;
-            color: var(--text-color);
+            color: #fff;
+            background: #000;
             text-decoration: none;
-            padding: 0.5rem 0;
-            border-bottom: 1px solid var(--text-color);
-            transition: opacity 0.2s ease;
+            padding: 1rem 2rem;
+            border-radius: 100px;
+            transition: all 0.2s ease;
         }
 
         .add-app a:hover {
-            opacity: 0.7;
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
+            body {
+                padding: 2rem 1rem;
             }
 
-            header {
-                margin-bottom: 2rem;
-                padding: 1rem 0;
+            .header {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 1.5rem;
+            }
+
+            .header-button {
+                margin-left: 0;
+                text-align: center;
+                justify-content: center;
             }
 
             h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
+            }
+
+            .filter-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .filter-button {
+                margin: 0.25rem;
             }
 
             .apps-grid {
-                gap: 1rem;
+                grid-template-columns: 1fr;
             }
-        }
 
-        .subtitle {
-            font-size: 1.125rem;
-            color: #666;
-            margin-bottom: 3rem;
+            .app-card {
+                padding: 2rem;
+            }
+
+            .add-app {
+                margin-top: 3rem;
+                padding: 2rem;
+            }
+
+            .add-app h2 {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Foiling Apps Directory</h1>
-        <p class="subtitle">Discover the best apps for foiling enthusiasts</p>
+        <div class="header">
+            <div class="header-content">
+                <h1>Foil Apps Directory</h1>
+                <p class="subtitle">Discover the best apps for foiling enthusiasts</p>
+            </div>
+            <a href="#add-app" class="header-button">Add your app</a>
+        </div>
+
+        <div class="sticky-wrapper" id="sticky-filters">
+            <div class="filter-container">
+                <div class="filter-section">
+                    <span class="filter-label">Filter by Sport</span>
+                    <div>
+                        <button class="filter-button active" data-filter="sport-all">All</button>
+                        <button class="filter-button" data-filter="sport-Wingfoiling">Wing</button>
+                        <button class="filter-button" data-filter="sport-Kitefoiling">Kite</button>
+                        <button class="filter-button" data-filter="sport-pumpfoil">Pump</button>
+                        <button class="filter-button" data-filter="sport-eFoil">eFoil</button>
+                    </div>
+                </div>
+                <div class="filter-section">
+                    <span class="filter-label">Filter by Platform</span>
+                    <div>
+                        <button class="filter-button active" data-filter="platform-all">All</button>
+                        <button class="filter-button" data-filter="platform-iOS">iOS</button>
+                        <button class="filter-button" data-filter="platform-Android">Android</button>
+                        <button class="filter-button" data-filter="platform-Apple Watch">Apple Watch</button>
+                        <button class="filter-button" data-filter="platform-Garmin">Garmin</button>
+                    </div>
+                </div>
+            </div>
+            <div class="results-counter" id="results-counter"></div>
+        </div>
 
         <div class="apps-grid" id="apps-container">
             <!-- Apps will be loaded here -->
         </div>
 
-        <div class="add-app">
+        <div id="add-app" class="add-app">
             <h2>Want to add your app?</h2>
-            <p>Follow the instructions in our README to add your app to this directory.</p>
-            <a href="https://github.com/pfederi/foilapps" target="_blank">View on GitHub</a>
+            <p>Join our directory of foiling apps. Submit your app through our GitHub repository and reach the foiling community.</p>
+            <a href="https://github.com/pfederi/foilapps" target="_blank">Submit on GitHub</a>
         </div>
     </div>
 
     <script>
+        let appsData = [];
+        let currentFilters = {
+            sport: 'all',
+            platform: 'all'
+        };
+
         async function loadApps() {
             try {
                 console.log('Fetching apps.json...');
@@ -224,31 +412,12 @@
                 const data = await response.json();
                 console.log('Data loaded:', data);
                 
-                const container = document.getElementById('apps-container');
-                
                 if (data && data.apps && Array.isArray(data.apps)) {
-                    console.log(`Rendering ${data.apps.length} apps...`);
-                    container.innerHTML = data.apps.map(app => `
-                        <div class="app-card">
-                            <h2>${app.name}</h2>
-                            <div class="chips-container">
-                                ${app.sport.map(sport => `
-                                    <span class="chip sport">${sport}</span>
-                                `).join('')}
-                            </div>
-                            <div class="chips-container">
-                                ${app.platforms.map(platform => `
-                                    <span class="chip platform">${platform}</span>
-                                `).join('')}
-                            </div>
-                            <p class="description">${app.description}</p>
-                            <a href="${app.url}" target="_blank">Visit App</a>
-                        </div>
-                    `).join('');
-                    console.log('Apps rendered successfully');
+                    appsData = data.apps;
+                    renderApps();
                 } else {
                     console.error('Invalid data format in apps.json:', data);
-                    container.innerHTML = '<p>Error: Invalid data format in apps.json</p>';
+                    document.getElementById('apps-container').innerHTML = '<p>Error: Invalid data format in apps.json</p>';
                 }
             } catch (error) {
                 console.error('Error loading apps:', error);
@@ -256,8 +425,83 @@
             }
         }
 
-        // Call the function when the page loads
-        document.addEventListener('DOMContentLoaded', loadApps);
+        function renderApps() {
+            const container = document.getElementById('apps-container');
+            let filteredApps = appsData;
+
+            // Apply sport filter
+            if (currentFilters.sport !== 'all') {
+                filteredApps = filteredApps.filter(app => 
+                    app.sport.includes(currentFilters.sport)
+                );
+            }
+
+            // Apply platform filter
+            if (currentFilters.platform !== 'all') {
+                filteredApps = filteredApps.filter(app => 
+                    app.platforms.map(p => p.toLowerCase()).includes(currentFilters.platform.toLowerCase())
+                );
+            }
+
+            // Update counter
+            const counterText = filteredApps.length === appsData.length 
+                ? `Showing all <strong>${filteredApps.length}</strong> apps`
+                : `Showing <strong>${filteredApps.length}</strong> of <strong>${appsData.length}</strong> apps`;
+            document.getElementById('results-counter').innerHTML = counterText;
+
+            container.innerHTML = filteredApps.map(app => `
+                <div class="app-card">
+                    <h2>${app.name}</h2>
+                    <div class="chips-container">
+                        ${app.sport.map(sport => `
+                            <span class="chip sport">${sport}</span>
+                        `).join('')}
+                    </div>
+                    <div class="chips-container">
+                        ${app.platforms.map(platform => `
+                            <span class="chip platform">${platform}</span>
+                        `).join('')}
+                    </div>
+                    <p class="description">${app.description}</p>
+                    <a href="${app.url}" target="_blank">Visit App</a>
+                </div>
+            `).join('');
+        }
+
+        // Add click handlers for filter buttons
+        document.addEventListener('DOMContentLoaded', () => {
+            loadApps();
+
+            const filterButtons = document.querySelectorAll('.filter-button');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const [type, value] = button.dataset.filter.split('-');
+                    
+                    // Remove active class from buttons in the same category
+                    document.querySelectorAll(`[data-filter^="${type}-"]`)
+                        .forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    button.classList.add('active');
+                    
+                    // Update filters
+                    currentFilters[type] = value;
+                    
+                    // Apply filters
+                    renderApps();
+                });
+            });
+        });
+
+        // Add scroll handler for sticky filter shadow
+        window.addEventListener('scroll', () => {
+            const stickyWrapper = document.getElementById('sticky-filters');
+            if (window.scrollY > 0) {
+                stickyWrapper.classList.add('is-sticky');
+            } else {
+                stickyWrapper.classList.remove('is-sticky');
+            }
+        });
     </script>
 </body>
 </html>
