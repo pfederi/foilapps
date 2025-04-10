@@ -245,6 +245,7 @@
             background: var(--hover-color);
             border-radius: 1.5rem;
             text-align: center;
+            margin-bottom: 4rem;
         }
 
         .add-app h2 {
@@ -279,6 +280,36 @@
         .add-app a:hover {
             opacity: 0.9;
             transform: translateY(-1px);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid var(--border-color);
+            color: #64748b;
+            font-size: 0.875rem;
+        }
+
+        .footer a {
+            color: #0369a1;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .heart {
+            color: #ff0000;
+            display: inline-block;
+            animation: heartBeat 1s infinite;
+        }
+
+        @keyframes heartBeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
         }
 
         html {
@@ -341,6 +372,11 @@
             .add-app h2 {
                 font-size: 1.5rem;
             }
+
+            .footer {
+                padding: 1.5rem 0;
+                font-size: 0.8125rem;
+            }
         }
     </style>
 </head>
@@ -389,6 +425,11 @@
             <p>Join our directory of foiling apps. Submit your app through our GitHub repository and reach the foiling community.</p>
             <a href="https://github.com/pfederi/foilapps" target="_blank">Submit on GitHub</a>
         </div>
+
+        <footer class="footer">
+            This is an open source project. View the code and contribute on <a href="https://github.com/pfederi/foilapps" target="_blank">GitHub</a>.<br>
+            Made with <span class="heart">♥</span> by <a href="https://lakeshorestudios.ch" target="_blank">Lakeshore Studios</a>
+        </footer>
     </div>
 
     <script>
