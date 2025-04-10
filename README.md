@@ -29,20 +29,24 @@ To add your app to the directory:
 ```
 
 ### Available Platforms
+The following platforms are currently represented, but we welcome others:
 - `ios`: iOS app
 - `android`: Android app
 - `apple watch`: Apple Watch app
 - `garmin`: Garmin watch app
 - `android watch`: Android Wear OS app
 - `web`: Web application
+- And more...
 
 ### Available Sports
+These are some of the foiling disciplines currently featured, but we're open to all foiling-related sports:
 - `wingfoil`: Wing Foiling
 - `kitefoil`: Kite Foiling
 - `pumpfoil`: Pump Foiling
 - `efoil`: Electric Foiling
 - `surffoil`: Surf Foiling
 - `downwindfoil`: Downwind Foiling
+- And any other foiling discipline
 
 4. Submit a pull request
 
@@ -101,20 +105,24 @@ So fügst du deine App zum Verzeichnis hinzu:
 ```
 
 ### Verfügbare Plattformen
+Die folgenden Plattformen sind derzeit vertreten, weitere sind willkommen:
 - `ios`: iOS App
 - `android`: Android App
 - `apple watch`: Apple Watch App
 - `garmin`: Garmin Watch App
 - `android watch`: Android Wear OS App
 - `web`: Web-Anwendung
+- Und weitere...
 
 ### Verfügbare Sportarten
+Dies sind einige der aktuell vertretenen Foiling-Disziplinen, wir sind offen für alle Foiling-bezogenen Sportarten:
 - `wingfoil`: Wing Foiling
 - `kitefoil`: Kite Foiling
 - `pumpfoil`: Pump Foiling
 - `efoil`: Electric Foiling
 - `surffoil`: Surf Foiling
 - `downwindfoil`: Downwind Foiling
+- Und alle weiteren Foiling-Disziplinen
 
 4. Erstelle einen Pull Request
 
