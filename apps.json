@@ -31,7 +31,7 @@
     {
       "name": "Foile.ch",
       "url": "https://foile.ch/",
-      "sport": ["pumpfoil", "downwindfoil", "wingfoiling"],
+      "sport": ["pumpfoil", "downwindfoil", "Wingfoil"],
       "platforms": ["web"],
       "description": "A web platform for analyzing foiling sessions with detailed statistics. Upload sessions from multiple GPS devices, track maneuvers, and compare performance with the community."
     },
@@ -45,21 +45,21 @@
     {
       "name": "Hoolan",
       "url": "https://www.hoolan.app/",
-      "sport": ["Wingfoiling", "Kitefoiling"],
+      "sport": ["wingfoil", "Kitefoil"],
       "platforms": ["iOS", "Android", "Apple Watch", "Garmin"],
       "description": "Track and analyse your kitesurfing, wingfoiling and windsurfing sessions for FREE. Record both jump and GPS track data on your Apple Watch or Garmin and see live data on your wrist as you ride."
     },
     {
       "name": "Waterspeed",
       "url": "https://waterspeedapp.com/",
-      "sport": ["Wingfoiling", "Hydrofoil", "Kitefoil", "eFoil", "Foil", "Pump surf"],
+      "sport": ["wingfoil", "Hydrofoil", "Kitefoil", "eFoil", "Foil", "Pumpfoil", "surffoil"],
       "platforms": ["iOS", "Android", "Apple Watch", "Garmin"],
       "description": "Track and analyze your water sports sessions with real-time data on your watch. Features include speed tracking, GPS mapping, weather forecasts, and detailed performance analytics. Perfect for all water sports enthusiasts."
     },
     {
       "name": "Surfr",
       "url": "https://www.thesurfr.app/",
-      "sport": ["Wingfoiling", "Kitefoiling"],
+      "sport": ["wingfoil", "Kitefoil"],
       "platforms": ["iOS", "Android", "Apple Watch", "Android Watch", "Garmin"],
       "description": "The ultimate app for kiteboarders, windsurfers, and wingfoilers. Track your sessions with high accuracy, connect with a community of 80,000+ riders, discover new spots, and boost your progression with in-depth analysis."
     }
