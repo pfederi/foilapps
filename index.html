@@ -547,16 +547,21 @@
         // Sticky filter functionality
         const stickyWrapper = document.querySelector('.sticky-wrapper');
         const appsGrid = document.querySelector('.apps-grid');
+        let lastScrollTop = 0;
         
         window.addEventListener('scroll', () => {
-            const rect = appsGrid.getBoundingClientRect();
             const filterRect = stickyWrapper.getBoundingClientRect();
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const isScrollingDown = scrollTop > lastScrollTop;
             
-            if (rect.top <= filterRect.bottom) {
+            // Only add shadow when the filter is actually stuck to the top
+            if (isScrollingDown && filterRect.top === 0) {
                 stickyWrapper.classList.add('is-sticky');
             } else {
                 stickyWrapper.classList.remove('is-sticky');
             }
+            
+            lastScrollTop = scrollTop;
         });
     </script>
 </body>
