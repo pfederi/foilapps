@@ -26,6 +26,7 @@ To add your app to the directory:
   "platforms": ["ios", "android", "apple watch", "garmin"],
   "description": "Brief description of your app"
 }
+4. Submit a pull request
 ```
 
 ### Available Platforms
@@ -47,8 +48,6 @@ These are some of the foiling disciplines currently featured, but we're open to 
 - `surffoil`: Surf Foiling
 - `downwindfoil`: Downwind Foiling
 - And any other foiling discipline
-
-4. Submit a pull request
 
 ## Contributing
 
@@ -103,6 +102,7 @@ So fügst du deine App zum Verzeichnis hinzu:
   "description": "Kurze Beschreibung deiner App"
 }
 ```
+4. Erstelle einen Pull Request
 
 ### Verfügbare Plattformen
 Die folgenden Plattformen sind derzeit vertreten, weitere sind willkommen:
@@ -123,8 +123,6 @@ Dies sind einige der aktuell vertretenen Foiling-Disziplinen, wir sind offen fü
 - `surffoil`: Surf Foiling
 - `downwindfoil`: Downwind Foiling
 - Und alle weiteren Foiling-Disziplinen
-
-4. Erstelle einen Pull Request
 
 ## Mitmachen
 
