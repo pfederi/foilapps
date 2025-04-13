@@ -62,6 +62,13 @@
       "sport": ["wingfoil", "Kitefoil"],
       "platforms": ["iOS", "Android", "Apple Watch", "Android Watch", "Garmin"],
       "description": "The ultimate app for kiteboarders, windsurfers, and wingfoilers. Track your sessions with high accuracy, connect with a community of 80,000+ riders, discover new spots, and boost your progression with in-depth analysis."
+    },
+    {
+      "name": "7III Water",
+      "url": "https://project7iii.com/water",
+      "sport": ["wingfoil", "kitefoil", "pumpfoil", "surffoil", "downwindfoil"],
+      "platforms": ["ios", "apple watch"],
+      "description": "Track your water sport sessions with your iPhone, Apple Watch or any smartwatch. Get detailed statistics by month, year, activity, locations, and tags."
     }
   ]
 } 
