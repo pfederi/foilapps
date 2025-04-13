@@ -26,8 +26,8 @@ To add your app to the directory:
   "platforms": ["ios", "android", "apple watch", "garmin"],
   "description": "Brief description of your app"
 }
-4. Submit a pull request
 ```
+4. Submit a pull request
 
 ### Available Platforms
 The following platforms are currently represented, but we welcome others:
