@@ -69,6 +69,13 @@
       "sport": ["wingfoil", "Kitefoil"],
       "platforms": ["iOS", "Android", "Apple Watch", "Android Watch", "Garmin"],
       "description": "The ultimate app for kiteboarders, windsurfers, and wingfoilers. Track your sessions with high accuracy, connect with a community of 80,000+ riders, discover new spots, and boost your progression with in-depth analysis."
+    },
+    {
+      "name": "Foil Sessions",
+      "url": "https://foilsessions.app/",
+      "sport": ["wingfoil", "Kitefoil"],
+      "platforms": ["iOS", "Apple Watch"],
+      "description": "An Apple Watch and iPhone app in the making—developed by a foiler, with the support of the amazing foiling community."
     }
   ]
 } 
