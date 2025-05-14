@@ -76,6 +76,13 @@
       "sport": ["wingfoil", "Kitefoil"],
       "platforms": ["iOS", "Apple Watch"],
       "description": "An Apple Watch and iPhone app in the making—developed by a foiler, with the support of the amazing foiling community."
+    },
+    {
+      "name": "Is it a good day for pumpfoiling?",
+      "url": "https://isitagooddayfor.pumpfoiling.community/",
+      "sport": ["Pumpfoil"],", "Apple Watch
+      "platforms": ["Web"],
+      "description":"A simple website that answers the eternal question of whether it's a good day for pumpfoiling. Spoiler alert: The answer is always "yes" - because every day is a good day to go foiling!"
     }
   ]
 } 
