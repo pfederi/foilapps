@@ -44,7 +44,7 @@
     },
     {
       "name": "JMG-APP Foiling",
-      "url": "https://www.jeanmichelgruber.com/applications-garmin-garmin-apps/foiling/english/",
+      "url": "https://www.jeanmichelgruber.com/foiling-eng.html",
       "sport": ["surffoil", "pumpfoil", "downwindfoil", "efoil"],
       "platforms": ["garmin"],
       "description": "The first Garmin app for foil activities including surf foil, pump foil, downwind foil and e-foil. Track speed, distance, heart rate, and automatically record laps for detailed session analysis."
