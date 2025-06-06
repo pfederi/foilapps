@@ -19,7 +19,7 @@
       "url": "https://foilmotion.webchoice.ch/",
       "sport": ["wingfoil", "kitefoil", "kite", "pumpfoil", "windfoil", "windsurf", "efoil", "surffoil", "surf", "downwindfoil"],
       "platforms": ["ios", "apple watch"],
-      "description": "Accurate GPS tracks for water sports. Stats on pumping frequency and glide time. Cleans up water affected GPS data and calculates speed and postion every 0.5s, great for resolving sharp turns."
+      "description": "Accurate GPS tracks for water sports. Stats on pumping frequency and glide time. Filters out water-affected GPS data. Calculates speed and location every 0.5s, great for resolving sharp turns."
     },
     {
       "name": "7III Water",
