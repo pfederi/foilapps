@@ -38,8 +38,8 @@
     {
       "name": "Smartfoil",
       "url": "https://www.getsmartfoil.com/",
-      "sport": ["wingfoil", "kitefoil", "pumpfoil", "windfoil", "surffoil", "downwindfoil", "hardware"],
-      "platforms": ["ios", "android"],
+      "sport": ["wingfoil", "kitefoil", "pumpfoil", "windfoil", "surffoil", "downwindfoil"],
+      "platforms": ["ios", "android", "hardware"],
       "description": "Master foiling faster with AI feedback and analysis."
     },
     {
