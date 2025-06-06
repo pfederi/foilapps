@@ -36,6 +36,13 @@
       "description": "Discover and explore the best pumpfoiling spots around the world. Find detailed information about launch sites, conditions, and local tips from the community."
     },
     {
+      "name": "Smartfoil",
+      "url": "https://www.getsmartfoil.com/",
+      "sport": ["wingfoil", "kitefoil", "pumpfoil", "windfoil", "surffoil", "downwindfoil"],
+      "platforms": ["ios", "apple watch"],
+      "description": "Master foiling faster with AI feedback and analysis."
+    },
+    {
       "name": "Foile.ch",
       "url": "https://foile.ch/",
       "sport": ["pumpfoil", "downwindfoil", "Wingfoil"],
