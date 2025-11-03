@@ -4,7 +4,7 @@
       "name": "Next Wave",
       "url": "https://nextwaveapp.ch/",
       "sport": ["pumpfoil"],
-      "platforms": ["ios", "android"],
+      "platforms": ["ios", "android","apple watch"],
       "description": "NextWave helps wake foilers across Swiss lakes by providing real-time boat schedules, ensuring you never miss the perfect wake for your foiling session."
     },
     {
