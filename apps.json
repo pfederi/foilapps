@@ -90,6 +90,20 @@
       "sport": ["Pumpfoil"],
       "platforms": ["Web"],
       "description":"A simple website that answers the eternal question of whether it's a good day for pumpfoiling. Spoiler alert: The answer is always yes - because every day is a good day to go foiling!"
+    },
+    {
+      "name": "yaft",
+      "url": "https://yaft.site/",
+      "sport": ["pumpfoil", "wingfoil", "parawing", "downwindfoil"],
+      "platforms": ["web"],
+      "description": "Yet another foil tracker: upload a GPX or FIT file from any watch (Amazfit, Garmin and more), pick what you rode, and get foiling-aware analysis on a map: time on foil, runs, tacks and jibes, upwind angles, pump rate and downwind splits."
+    },
+    {
+      "name": "yaft for Android",
+      "url": "https://github.com/cbrasser/yaft-android",
+      "sport": ["pumpfoil", "wingfoil", "parawing", "downwindfoil"],
+      "platforms": ["android"],
+      "description": "Record foiling sessions with your phone's GPS, see the track offline and send it to yaft.site for the full analysis. Open source (GPL-3.0), no Google Play Services."
     }
   ]
 } 
