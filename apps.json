@@ -104,6 +104,13 @@
       "sport": ["pumpfoil", "wingfoil", "parawing", "downwindfoil"],
       "platforms": ["android"],
       "description": "Record foiling sessions with your phone's GPS, see the track offline and send it to yaft.site for the full analysis. Open source (GPL-3.0), no Google Play Services."
+    },
+    {
+      "name": "Sociedad del Viento",
+      "url": "https://sociedaddelviento.com/",
+      "sport": ["wingfoil"],
+      "platforms": ["web"],
+      "description": "Free wind forecast for nearly 900 wingfoil, kitesurf and windsurf spots in Spain, Portugal, France and Italy, checked every day against real weather stations, with the results published."
     }
   ]
 } 
