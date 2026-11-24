@@ -21,13 +21,18 @@ To add your app to the directory:
 ```json
 {
   "name": "Your App Name",
+  "added": "YYYY-MM-DD",
+  "image": "images/your-app-name.png",
   "url": "https://your-app-url.com",
   "sport": ["wingfoil", "kitefoil"],
   "platforms": ["ios", "android", "apple watch", "garmin"],
   "description": "Brief description of your app"
 }
 ```
-4. Submit a pull request
+4. Optional: add your app icon to the `images/` folder (square PNG or SVG, ideally 256×256 px) and reference it in `image`
+5. Submit a pull request
+
+`added` is the date your app was added to the directory. Apps are listed newest first.
 
 ### Available Platforms
 The following platforms are currently represented, but we welcome others:
@@ -96,13 +101,18 @@ So fügst du deine App zum Verzeichnis hinzu:
 ```json
 {
   "name": "Dein App-Name",
+  "added": "YYYY-MM-DD",
+  "image": "images/dein-app-name.png",
   "url": "https://deine-app-url.com",
   "sport": ["wingfoil", "kitefoil"],
   "platforms": ["ios", "android", "apple watch", "garmin"],
   "description": "Kurze Beschreibung deiner App"
 }
 ```
-4. Erstelle einen Pull Request
+4. Optional: Lege dein App-Icon im Ordner `images/` ab (quadratisches PNG oder SVG, idealerweise 256×256 px) und verweise in `image` darauf
+5. Erstelle einen Pull Request
+
+`added` ist das Datum, an dem deine App ins Verzeichnis aufgenommen wurde. Die neuesten Apps stehen zuoberst.
 
 ### Verfügbare Plattformen
 Die folgenden Plattformen sind derzeit vertreten, weitere sind willkommen:

@@ -2,6 +2,8 @@
   "apps": [
     {
       "name": "Next Wave",
+      "added": "2025-04-10",
+      "image": "images/next-wave.png",
       "url": "https://nextwaveapp.ch/",
       "sport": ["pumpfoil"],
       "platforms": ["ios", "android","apple watch"],
@@ -9,6 +11,8 @@
     },
     {
       "name": "Foil Mates",
+      "added": "2025-04-10",
+      "image": "images/foil-mates.png",
       "url": "https://foilmates.com/",
       "sport": ["pumpfoil"],
       "platforms": ["ios", "android"],
@@ -16,6 +20,8 @@
     },
     {
       "name": "Foil Motion",
+      "added": "2025-04-10",
+      "image": "images/foil-motion.png",
       "url": "https://foilmotion.webchoice.ch/",
       "sport": ["wingfoil", "kitefoil", "pumpfoil", "windfoil", "windsurf", "efoil", "surffoil", "downwindfoil"],
       "platforms": ["ios", "apple watch"],
@@ -23,6 +29,8 @@
     },
     {
       "name": "7III Water",
+      "added": "2025-04-13",
+      "image": "images/7iii-water.png",
       "url": "https://project7iii.com/water",
       "sport": ["wingfoil", "kitefoil", "pumpfoil", "surffoil", "downwindfoil"],
       "platforms": ["ios", "apple watch"],
@@ -30,6 +38,8 @@
     },
     {
       "name": "Pumpfoiling Spots",
+      "added": "2025-04-10",
+      "image": "images/pumpfoiling-spots.png",
       "url": "https://pumpfoiling.community/pump-foiling-spots/",
       "sport": ["pumpfoil"],
       "platforms": ["web"],
@@ -37,6 +47,7 @@
     },
     {
       "name": "Smartfoil",
+      "added": "2025-06-06",
       "url": "https://www.getsmartfoil.com/",
       "sport": ["wingfoil", "kitefoil", "pumpfoil", "windfoil", "surffoil", "downwindfoil"],
       "platforms": ["ios", "android", "hardware"],
@@ -44,6 +55,7 @@
     },
     {
       "name": "Foile.ch",
+      "added": "2025-04-10",
       "url": "https://foile.ch/",
       "sport": ["pumpfoil", "downwindfoil", "Wingfoil"],
       "platforms": ["web"],
@@ -51,6 +63,8 @@
     },
     {
       "name": "JMG-APP Foiling",
+      "added": "2025-04-10",
+      "image": "images/jmg-app-foiling.png",
       "url": "https://www.jeanmichelgruber.com/foiling-eng.html",
       "sport": ["surffoil", "pumpfoil", "downwindfoil", "efoil"],
       "platforms": ["garmin"],
@@ -58,6 +72,8 @@
     },
     {
       "name": "Hoolan",
+      "added": "2025-04-10",
+      "image": "images/hoolan.png",
       "url": "https://www.hoolan.app/",
       "sport": ["wingfoil", "Kitefoil"],
       "platforms": ["iOS", "Android", "Apple Watch", "Garmin"],
@@ -65,6 +81,8 @@
     },
     {
       "name": "Waterspeed",
+      "added": "2025-04-10",
+      "image": "images/waterspeed.png",
       "url": "https://waterspeedapp.com/",
       "sport": ["wingfoil", "Hydrofoil", "Kitefoil", "eFoil", "Foil", "Pumpfoil", "surffoil"],
       "platforms": ["iOS", "Android", "Apple Watch", "Garmin"],
@@ -72,6 +90,8 @@
     },
     {
       "name": "Surfr",
+      "added": "2025-04-10",
+      "image": "images/surfr.png",
       "url": "https://www.thesurfr.app/",
       "sport": ["wingfoil", "Kitefoil"],
       "platforms": ["iOS", "Android", "Apple Watch", "Android Watch", "Garmin"],
@@ -79,6 +99,8 @@
     },
     {
       "name": "Foil Sessions",
+      "added": "2025-04-14",
+      "image": "images/foil-sessions.png",
       "url": "https://foilsessions.app/",
       "sport": ["wingfoil", "Kitefoil"],
       "platforms": ["iOS", "Apple Watch"],
@@ -86,6 +108,7 @@
     },
     {
       "name": "Is it a good day for pumpfoiling?",
+      "added": "2025-05-14",
       "url": "https://isitagooddayfor.pumpfoiling.community/",
       "sport": ["Pumpfoil"],
       "platforms": ["Web"],
@@ -93,6 +116,8 @@
     },
     {
       "name": "yaft",
+      "added": "2026-10-08",
+      "image": "images/yaft.png",
       "url": "https://yaft.site/",
       "sport": ["pumpfoil", "wingfoil", "parawing", "downwindfoil"],
       "platforms": ["web"],
@@ -100,6 +125,8 @@
     },
     {
       "name": "yaft for Android",
+      "added": "2026-10-08",
+      "image": "images/yaft-android.png",
       "url": "https://github.com/cbrasser/yaft-android",
       "sport": ["pumpfoil", "wingfoil", "parawing", "downwindfoil"],
       "platforms": ["android"],
@@ -107,6 +134,8 @@
     },
     {
       "name": "Sociedad del Viento",
+      "added": "2026-11-09",
+      "image": "images/sociedad-del-viento.png",
       "url": "https://sociedaddelviento.com/",
       "sport": ["wingfoil"],
       "platforms": ["web"],
@@ -114,6 +143,8 @@
     },
     {
       "name": "MarinePath",
+      "added": "2026-11-23",
+      "image": "images/marinepath.png",
       "url": "https://marinepath.app/",
       "sport": ["wingfoil", "downwindfoil"],
       "platforms": ["ios", "apple watch"],

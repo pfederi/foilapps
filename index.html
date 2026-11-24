@@ -190,6 +190,43 @@
             letter-spacing: -0.02em;
         }
 
+        .app-card .app-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .app-card .app-icon {
+            flex-shrink: 0;
+            width: 56px;
+            height: 56px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            object-fit: cover;
+        }
+
+        .app-card .app-icon.placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--sport-chip-bg);
+            color: var(--sport-chip-text);
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .app-card .app-header h2 {
+            margin-bottom: 0;
+            line-height: 1.2;
+        }
+
+        .app-card .added {
+            font-size: 0.875rem;
+            color: #64748b;
+            margin-top: 0.25rem;
+        }
+
         .app-card .chips-container {
             display: flex;
             flex-wrap: wrap;
@@ -518,7 +555,10 @@
                 console.log('Data loaded:', data);
                 
                 if (data && data.apps && Array.isArray(data.apps)) {
-                    appsData = data.apps;
+                    // Newest apps first (stable sort keeps file order for same date)
+                    appsData = [...data.apps].sort((a, b) =>
+                        (b.added || '').localeCompare(a.added || '')
+                    );
                     const uniqueSports = getUniqueSports(appsData);
                     updateSportFilters(uniqueSports);
                     renderApps();
@@ -531,6 +571,14 @@
                 console.error('Error loading apps:', error);
                 document.querySelector('.apps-grid').innerHTML = `<p>Error loading apps: ${error.message}</p>`;
             }
+        }
+
+        // "2026-11-23" -> "Nov 23, 2026" (parsed as local date to avoid timezone shifts)
+        function formatAddedDate(added) {
+            const [year, month, day] = added.split('-').map(Number);
+            return new Date(year, month - 1, day).toLocaleDateString('en-US', {
+                year: 'numeric', month: 'short', day: 'numeric'
+            });
         }
 
         function renderApps() {
@@ -562,7 +610,15 @@
 
             container.innerHTML = filteredApps.map(app => `
                 <div class="app-card">
-                    <h2>${app.name}</h2>
+                    <div class="app-header">
+                        ${app.image
+                            ? `<img class="app-icon" src="${app.image}" alt="" loading="lazy">`
+                            : `<div class="app-icon placeholder" aria-hidden="true">${app.name.charAt(0)}</div>`}
+                        <div>
+                            <h2>${app.name}</h2>
+                            ${app.added ? `<p class="added">Added ${formatAddedDate(app.added)}</p>` : ''}
+                        </div>
+                    </div>
                     <div class="chips-container">
                         ${app.sport.map(sport => {
                             const normalizedSport = getNormalizedSport(sport);
